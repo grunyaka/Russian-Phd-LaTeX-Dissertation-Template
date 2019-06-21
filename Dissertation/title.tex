@@ -1,14 +1,18 @@
 % Титульный лист (ГОСТ Р 7.0.11-2001, 5.1)
 \thispagestyle{empty}
+\bfseries
 \begin{center}
 \thesisOrganization
 \end{center}
 %
-\vspace{0pt plus4fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
+\mdseries
+\vspace{0pt plus0fill}
+%\vspace{0pt plus4fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 \IfFileExists{images/logo.pdf}{
   \begin{minipage}[b]{0.5\linewidth}
     \begin{flushleft}
-      \includegraphics[height=3.5cm]{logo}
+      \includegraphics[height=0cm]{logo}
+      %\includegraphics[height=3.5cm]{logo}
     \end{flushleft}
   \end{minipage}%
   \begin{minipage}[b]{0.5\linewidth}
@@ -19,27 +23,32 @@
   \end{minipage}
 }{
 \begin{flushright}
-%На правах рукописи
+На правах рукописи
 
 %\textsl {УДК \thesisUdk}
 \end{flushright}
 }
 %
-\vspace{0pt plus6fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
+\vspace{0pt plus2fill}
+%\vspace{0pt plus6fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 \begin{center}
 {\large \thesisAuthor}
 \end{center}
 %
 \vspace{0pt plus1fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 \begin{center}
-\textbf {\large %\MakeUppercase
+\textbf {\large \scshape  %\MakeUppercase
 \thesisTitle}
+\\Научно-квалификационная работа
 
 \vspace{0pt plus2fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 {%\small
-Специальность \thesisSpecialtyNumber\ "---
-
+%Специальность \thesisSpecialtyNumber\ "---
+Направленность (профиль) "--- \thesisSpecialtyNumber\ ,
+%
 <<\thesisSpecialtyTitle>>
+
+Квалификация <<Исследователь. Преподаватель-Исследователь>>
 }
 
 \ifdefined\thesisSpecialtyTwoNumber
@@ -52,21 +61,25 @@
 
 \vspace{0pt plus2fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 %Диссертация на соискание учёной степени
-Научно-квалификационная работа
+%Научно-квалификационная работа
 
 %\thesisDegree
 \end{center}
 %
 \vspace{0pt plus4fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
-\begin{flushright}
+%\begin{flushright}
+%\begin{hangindent=3cm}
+\hfill\parbox{10cm}{  \bfseries
 \ifdefined\supervisorTwoFio
 Научные руководители:
 
 \supervisorRegalia
 
 \ifdefined\supervisorDead
+%\framebox{\supervisorFioShort}
 \framebox{\supervisorFio}
 \else
+%\supervisorFioShort
 \supervisorFio
 \fi
 
@@ -75,21 +88,33 @@
 \ifdefined\supervisorTwoDead
 \framebox{\supervisorTwoFio}
 \else
+%\supervisorFioShort
 \supervisorFio
 \fi
 \else
-Научный руководитель:
-
-\supervisorRegalia%{\textcolor{black}}
+%Научный руководитель:
+%\noindent 
+\hangindent=3cm
+\hangafter=-1
+%\begin{flushright} 
+Научный руководитель %\end{flushright}
+%\noindent
+\supervisorRegalia
 
 \ifdefined\supervisorDead
-\framebox{\supervisorFio}
+%\framebox{\supervisorFio}
+\framebox{\supervisorFioShort}
 \else
-\supervisorFio
+%\supervisorFio
+\supervisorFioShort
 \fi
 \fi
+/\mdseries $\underset{\text{\tiny{(подпись)}}}{\underline{\hspace{0.2\textwidth}}}$.\\ 
+  \\  \\Оценка \hrulefill\\Протокол N \def\hrf#1{\hbox to#1{\hrulefill}}\hrf{1.5em} {от} <<\hrf{1.5em}>> \hrf{5em} 20\hrf{1.5em}~г.\\*Председатель ГЭК$\underset{\text{\tiny{(подпись)}}}{\underline{\hspace{0.1\textwidth}}}$/$\underset{\text{\tiny{(расшифровка подписи)}}}{\underline{\hspace{0.225\textwidth}}}$
+}
 
-\end{flushright}
+%\end{hangindent}
+%\end{flushright}
 %
 \vspace{0pt plus4fill} %число перед fill = кратность относительно некоторого расстояния fill, кусками которого заполнены пустые места
 {\centering\thesisCity\ "--- \thesisYear\par}

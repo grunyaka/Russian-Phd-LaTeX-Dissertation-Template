@@ -194,18 +194,20 @@
 
 
 {\probation}
-Детальное изложение методов и результатов работы представлено в четырех публикациях, индексируемых в наукометрических базах данных (web of science, Scopus и т.п.), в устных докладах на российских и международных конференциях (Молодежные пулковские конференции, астрометрические конференции <<Пулково--2012>>, <<Пулково--2015>>, <<Пулково--2018>>, ВАК-2013 (Санкт-Петербург), ВАК-2016 (Нижний Архыз),<<Современная астрометрия>> (Москва)), астрометрических семинарах Пулковской обсерватории и Пулковских молодежных конференциях. Кроме того, результаты исследований доступны в астрономических базах данных (CDS, WDS).
+Детальное изложение методов и результатов работы представлено в четырех публикациях, индексируемых в наукометрических базах данных (web of science, Scopus и т.п.), в устных докладах на российских и международных конференциях (астрометрические конференции <<Пулково-2012>>, <<Пулково-2015>>, <<Пулково-2018>>; ВАК-2013 (Санкт-Петербург); ВАК-2016 (Нижний Архыз); <<Современная астрометрия>> (Москва)), астрометрических семинарах Пулковской обсерватории и Пулковских молодежных конференциях. Кроме того, результаты исследований доступны в астрономических базах данных (CDS, WDS).
+%\textbf{Публикации.} Основные результаты по теме диссертации изложены в 4 печатных изданиях. Из них 3 изданы в журналах, рекомендованных ВАК, 4 индексируются в Scopus (1 работа является материалами конференции), 3 индексируются в Web of Science. 
 
 {\contribution} Автор принимал активное участие во многих этапах работы: наблюдения на пулковских  телескопах (Нормальном астрографе и телескопе <<Сатурн>>), написание программного обеспечения для вычисления и анализа собственных движений звезд, написание текстов для совместных с соавторами научных статей, выступления на научных конференциях с устными докладами, посвященными настоящему исследованию. 
 
-\ifnumequal{\value{bibliosel}}{0}
+
+%\ifnumequal{\value{bibliosel}}{0}
 {%%% Встроенная реализация с загрузкой файла через движок bibtex8. (При желании, внутри можно использовать обычные ссылки, наподобие `\cite{vakbib1,vakbib2}`).
-    {\publications} Основные результаты по теме диссертации изложены в XX печатных изданиях,
-    X из которых изданы в журналах, рекомендованных ВАК,
-    X "--- в тезисах докладов.
+    %{\publications}% Основные результаты по теме диссертации изложены в XX печатных изданиях,
+    %X из которых изданы в журналах, рекомендованных ВАК,
+    %X "--- в тезисах докладов.
 }% 
 {%%% Реализация пакетом biblatex через движок biber
-    \begin{refsection}[bl-authorvak,bl-authorwos,bl-authorscopus,bl-authorother,bl-authorconf]
+    %\begin{refsection}[bl-authorvak,bl-authorwos,bl-authorscopus,bl-authorother,bl-authorconf]
         % Это refsection=1.
         % Процитированные здесь работы:
         %  * подсчитываются, для автоматического составления фразы "Основные результаты ..."
@@ -214,12 +216,12 @@
         %  * при использовании `\insertbiblioauthorgrouped`, порядок команд `\printbibliography` в нём должен быть тем же (см. biblio/biblatex.tex)
         %
         % Невидимый библиографический список для подсчёта количества публикаций:
-        \printbibliography[heading=nobibheading, section=1, env=countauthorvak,    keyword=biblioauthorvak]%
-        \printbibliography[heading=nobibheading, section=1, env=countauthorwos,    keyword=biblioauthorwos]%
-        \printbibliography[heading=nobibheading, section=1, env=countauthorscopus, keyword=biblioauthorscopus]%
-        \printbibliography[heading=nobibheading, section=1, env=countauthorconf,   keyword=biblioauthorconf]%
-        \printbibliography[heading=nobibheading, section=1, env=countauthorother,  keyword=biblioauthorother]%
-        \printbibliography[heading=nobibheading, section=1, env=countauthor,       keyword=biblioauthor]%
+        %\printbibliography[heading=nobibheading, section=1, env=countauthorvak,    keyword=biblioauthorvak]%
+        %\printbibliography[heading=nobibheading, section=1, env=countauthorwos,    keyword=biblioauthorwos]%
+        %\printbibliography[heading=nobibheading, section=1, env=countauthorscopus, keyword=biblioauthorscopus]%
+        %\printbibliography[heading=nobibheading, section=1, env=countauthorconf,   keyword=biblioauthorconf]%
+        %\printbibliography[heading=nobibheading, section=1, env=countauthorother,  keyword=biblioauthorother]%
+        %\printbibliography[heading=nobibheading, section=1, env=countauthor,       keyword=biblioauthor]%
         %
         % Цитирования.
         %  * Порядок перечисления определяет порядок в библиографии (только внутри подраздела, если `\insertbiblioauthorgrouped`).
@@ -227,47 +229,51 @@
         %  * Если цитировать каждый источник отдельной командой --- найти некоторые ошибки будет проще.
         %
         %% authorvak
-        \nocite{vakbib1}%
-        \nocite{vakbib2}%
+        %\nocite{vakbib1}%
+        %\nocite{vakbib2}%
+        %\nocite{vakbib3}
         %
         %% authorwos
-        \nocite{wosbib1}%
+        %\nocite{wosbib1}%
         %
         %% authorscopus
-        \nocite{scbib1}%
+        %\nocite{scbib1}%
         %
         %% authorconf
-        \nocite{confbib1}%
-        \nocite{confbib2}%
+        %\nocite{confbib1}%
+        %\nocite{confbib2}%
         %
         %% authorother
-        \nocite{bib1}%
-        \nocite{bib2}%
+        %\nocite{bib1}%
+        %\nocite{bib2}%
+        %\nocite{bib3}
+        %\nocite{bib4}
+        %\nocite{bib5}
         %
         %
-        {\publications} Основные результаты по теме диссертации изложены в~\arabic{citeauthor}~печатных изданиях,
-        \newcounter{citeauthorscwostot}% сумма citeauthorscopus и citeauthorwos
-        \setcounter{citeauthorscwostot}{\value{citeauthorscopus}}%
-        \addtocounter{citeauthorscwostot}{\value{citeauthorwos}}%
-        \arabic{citeauthorvak} из которых изданы в журналах, рекомендованных ВАК\sloppy%
-        \ifnum \value{citeauthorscwostot}>0%
-            , \arabic{citeauthorscwostot} "--- в~периодических научных журналах, индексируемых Web of Science и Scopus\sloppy%
-        \fi%
-        \ifnum \value{citeauthorconf}>0%
-            , \arabic{citeauthorconf} "--- в~тезисах докладов.
-        \else%
-            .
-        \fi
-    \end{refsection}%
-    \begin{refsection}[bl-authorvak,bl-authorwos,bl-authorscopus,bl-authorother,bl-authorconf]
+        %{\publications} Основные результаты по теме диссертации изложены в~\arabic{citeauthor}~печатных изданиях,
+        %\newcounter{citeauthorscwostot}% сумма citeauthorscopus и citeauthorwos
+        %\setcounter{citeauthorscwostot}{\value{citeauthorscopus}}%
+        %\addtocounter{citeauthorscwostot}{\value{citeauthorwos}}%
+        %\arabic{citeauthorvak} из которых изданы в журналах, рекомендованных ВАК\sloppy%
+        %\ifnum \value{citeauthorscwostot}>0%
+        %    , \arabic{citeauthorscwostot} "--- в~периодических научных журналах, индексируемых Web of Science и Scopus\sloppy%
+        %\fi%
+        %\ifnum \value{citeauthorconf}>0%
+        %    , \arabic{citeauthorconf} "--- в~тезисах докладов.
+        %\else%
+        %    .
+        %\fi
+    %\end{refsection}%
+    %\begin{refsection}[bl-authorvak,bl-authorwos,bl-authorscopus,bl-authorother,bl-authorconf]
         % Это refsection=2.
         % Процитированные здесь работы:
         %  * попадают в авторскую библиографию, при usefootcite==0 и стиле `\insertbiblioauthorimportant`.
         %  * ни на что не влияют в противном случае
-        \nocite{vakbib2}%vak
-        \nocite{bib1}%other
-        \nocite{confbib1}%conf
-    \end{refsection}%
+        %\nocite{vakbib2}%vak
+        %\nocite{bib1}%other
+        %\nocite{confbib1}%conf
+    %\end{refsection}%
 	%
 	% Всё, что вне этих двух refsection, это refsection=0,
 	%  * для диссертации - это нормальные ссылки, попадающие в обычную библиографию
